@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Definimos el tipo de documento como HTML5 y establece el idioma principal en inglés -->
+<head>
+    <!-- Establecemos la codificación de caracteres a UTF-8, que es compatible con la mayoría de los caracteres -->
+    <meta charset="UTF-8">
+    <!-- Ajustamos el ancho de la página al ancho de la pantalla del dispositivo, lo que la hace responsiva -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Definimos el título de la página que aparece en la pestaña del navegador -->
+    <title>Challenge Alura</title>
+    <!-- Llamamos a la hoja de estilos de Bootstrap para un diseño moderno y responsivo -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlazamos nuestro CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    
+    <!-- Cabecera centrada con un margen superior e inferior de 4 unidades -->
+    <header class="text-center my-4">
+        <!-- Título principal de la página -->
+        <h1>Encriptador y Desencriptador de Texto</h1>
+    </header>
+
+    <!-- Contenedor principal para el contenido de la página, usando Bootstrap -->
+    <main class="container">
+        <!-- Fila que contiene los textarea para entrada y salida de texto -->
+        <div class="row textarea-container">
+            <!-- Columna que ocupa 12 espacios en pantallas pequeñas y 6 en medianas, con margen inferior -->
+            <div class="col-12 col-md-6 mb-3">
+                <!-- Área de texto donde el usuario ingresa el texto a encriptar -->
+                <textarea id="inputText" class="form-control" placeholder="Ingrese el texto aquí"></textarea>
+            </div>
+            <!-- Columna similar a la anterior para el área de texto de salida -->
+            <div class="col-12 col-md-6 mb-3">
+                <!-- Área de texto donde se mostrará el texto encriptado/desencriptado, el "read only" es de solo lectura -->
+                <textarea id="outputText" class="form-control" placeholder="Resultado" readonly></textarea>
+            </div>
+        </div>
+
+        <!-- Fila que contiene los botones de acción -->
+        <div class="row button-container">
+            <!-- Columna para el botón de encriptar -->
+            <div class="col-12 col-md-4 mb-3">
+                <!-- Botón para llamar a la función JavaScript 'encryptText' al ser presionado -->
+                <button class="btn btn-primary btn-block" onclick="encryptText()">ENCRIPTAR</button>
+            </div>
+            <!-- Columna para el botón de copiar -->
+            <div class="col-12 col-md-4 mb-3">
+                <!-- Botón que llama a la función de JavaScript 'copyText' al ser presionado -->
+                <button class="btn btn-secondary btn-block" onclick="copyText()">COPIAR</button>
+            </div>
+            <!-- Columna para el botón de desencriptar -->
+            <div class="col-12 col-md-4 mb-3">
+                <!-- Botón que llama a la función de JavaScript 'decryptText' al ser presionado -->
+                <button class="btn btn-success btn-block" onclick="decryptText()">DESENCRIPTAR</button>
+            </div>
+        </div>
+
+        <!-- Contenedor para mostrar mensajes de validación, centrado y en color rojo -->
+        <div id="validationMessage" class="text-danger text-center"></div>
+        <img class="img" src="images/SecretoProfesional_1.png" alt="imagen" >
+    </main>
+
+    <!-- Pie de página centrado con un margen superior -->
+    <footer class="text-center mt-4">
+             Regina Gonzalez
+    </footer>
+
+    <!-- Incluye un archivo JavaScript externo con la lógica del encriptador/desencriptador -->
+    <script src="script.js"></script>
+    <!-- Incluye jQuery para facilitar la manipulación del DOM y otras tareas -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <!-- Incluye Popper.js, necesario para algunas funcionalidades de Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <!-- Incluye el archivo JavaScript de Bootstrap para funcionalidades dinámicas -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

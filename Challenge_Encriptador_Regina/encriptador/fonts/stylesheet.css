@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Yung Jakes New Handwriting';
+    src: url('fonts/YungJakesNewHandwriting-Rg.woff2') format('woff2'),
+         url('fonts/YungJakesNewHandwriting-Rg.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
